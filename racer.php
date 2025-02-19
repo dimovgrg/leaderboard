@@ -22,24 +22,24 @@ function getRacer()
 
     $results = $stmt->fetchAll();
 
-    if (count($results) > 0) {
-        echo "<table border='2'>
+    if (count($results) > 0) { ?>
+        <table border='2'>
         <tr>
             <td>Име</td>
             <td>Имейл</td>
             <td>Време</td>
             <td>Дата</td>
-            </td>";
+            </tr>
 
-        foreach ($results as $result) {
-            echo "<tr>
-            <td>" . $result["name"] . "</td>
-            <td>" . $result["email"] . "</td>
-            <td>" . $result["lap_id"] . "</td>
-            <td>" . $result["date"] . "</td>
-              </tr>";
-        }
+        <?php foreach ($results as $result) { ?>
+            <tr>
+            <td><?php echo $result["name"] ?></td>
+            <td><?php echo $result["email"] ?></td>
+            <td><?php echo $result["lap_id"] ?></td>
+            <td><?php echo $result["date"] ?></td>
+              </tr>
+        <?php }
     }
 }
-    getRacer();
+    getRacer(); ?>
 
