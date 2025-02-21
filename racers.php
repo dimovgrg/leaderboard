@@ -27,24 +27,34 @@ $results = $stmt->fetchAll();
 
 if (count($results) > 0) { ?>
 
-    <form action="">
-        <input type="text" id="search" name="search" placeholder="Търси по име..">
-        <button type="submit" name="submit">Търси!</button>
-    </form>
+<html>
+<body>
 
-    <table border='2'>
+<head>
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списък състезатели</title>
+</head>
+</body>
+<form action="">
+    <input type="text" id="search" name="search" placeholder="Търси по име..">
+    <button type="submit" name="submit">Търси!</button>
+</form>
+
+<table border='2'>
+    <tr>
+        <th>Състезатели</th>
+    </tr>
+
+    <?php foreach ($results as $result) { ?>
         <tr>
-            <th>Състезатели</th>
+            <td><a href='racer.php?id= <?php echo $result['id'] ?>'> <?php echo $result['name']; ?></a></td>
         </tr>
 
-        <?php foreach ($results as $result) { ?>
-            <tr>
-                <td><a href='racer.php?id= <?php echo $result['id'] ?>'> <?php echo $result['name']; ?></a></td>
-            </tr>
+    <?php } ?>
 
-        <?php } ?>
-
-    </table>
+</table>
+</html>
 <?php } else {
     echo "0 results";
 } ?>

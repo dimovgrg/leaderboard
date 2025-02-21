@@ -26,7 +26,7 @@ function createRacer(string $name, string $email): bool
             "email" => $email,
         ]);
     } catch (\Exception) {
-        return false;
+        return false;  //false ако има грешка, долу true ако вс е наред
     }
 
     return true;

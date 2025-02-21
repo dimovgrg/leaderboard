@@ -14,6 +14,15 @@ $stmt->execute();
 $results = $stmt->fetchAll();
 
 if (count($results) > 0) { ?>
+        <html>
+        <body>
+
+        <head>
+            <meta charset="UTF-8">
+            <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Списък с времена</title>
+        </head>
+        </body>
     <table border='2'>
         <tr>
             <th>Ранк</th>
@@ -32,6 +41,7 @@ if (count($results) > 0) { ?>
             </tr>
         <?php } ?>
     </table>
+        </html>
 <?php } else {
     echo "0 results";
 }

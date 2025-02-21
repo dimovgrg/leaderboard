@@ -32,7 +32,7 @@ function getRacers(): ?array
 ?>
 
 
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="bg" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,10 +40,10 @@ function getRacers(): ?array
 </head>
 <body>
 
-<h1>VARNA HARD ENDURO CHAMPIONSHIP</h1>
+<h1>VARNA ENDURO CHAMPIONSHIP</h1>
 <h2>23.05.2025 - 08:00АМ</h2>
 <h2><a href="https://maps.app.goo.gl/WMLvjBddcnJi1w5o8">Начало/Финал</a></h2>
-<h2><a href="https://maps.app.goo.gl/xwELMXn4gxt6VwhP6">Междинна точка</a></h2>
+<h2><a href="https://maps.app.goo.gl/k5XT5q7SpMCo2mxbA">Междинна точка</a></h2>
 <h2>Регистрирай се за тура, <a href="create.php">тук</a>!</h2>
 <h2>Запиши новито си време, <a href="lap.time.php">тук</a>!</h2>
 <h2><a href="racers.php">Всички състезатели</a></h2>
