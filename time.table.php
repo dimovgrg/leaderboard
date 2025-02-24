@@ -14,15 +14,14 @@ $stmt->execute();
 $results = $stmt->fetchAll();
 
 if (count($results) > 0) { ?>
-        <html>
-        <body>
+    <html>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta charset="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Списък с времена</title>
-        </head>
-        </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Списък с времена</title>
+    </head>
+    <body>
     <table border='2'>
         <tr>
             <th>Ранк</th>
@@ -34,14 +33,16 @@ if (count($results) > 0) { ?>
         <?php foreach ($results as $index => $result) { ?>
             <tr>
                 <td><?php echo $index + 1; ?></td>
-                <td><?php echo $result['name']?></td>
-                <td><?php echo $result['lap_time']?></td>
-                <td><?php echo $result['date']?></td>
+                <td><?php echo $result['name'] ?></td>
+                <td><?php echo $result['lap_time'] ?></td>
+                <td><?php echo $result['date'] ?></td>
                 <td><a href='delete.the.time.php?id=<?php echo $result['lap_time_id']; ?>'>Delete</a></td>
             </tr>
         <?php } ?>
+
     </table>
-        </html>
+    </body>
+    </html>
 <?php } else {
     echo "0 results";
 }

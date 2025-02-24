@@ -53,7 +53,6 @@ if (isset($_POST['submit'])) {
 }
 ?>
 <html>
-<body>
 
 <head>
     <meta charset="UTF-8">
