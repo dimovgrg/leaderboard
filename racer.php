@@ -1,8 +1,8 @@
 <?php
 
-function getLapTimesByRacerId($id)
+function getLapTimesByRacerId(int $id): array
 {
-    /** @var PDO $pdo  */
+    /** @var PDO $pdo */
     $pdo = require "db.php";
 
     $sql = "
@@ -19,7 +19,7 @@ function getLapTimesByRacerId($id)
     return $stmt->fetchAll();
 }
 
-function getRacer($id)
+function getRacer(int $id): array
 {
     /** @var PDO $pdo */
     $pdo = require "db.php";

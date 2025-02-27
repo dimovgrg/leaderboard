@@ -23,6 +23,7 @@ if (count($results) > 0) { ?>
     </head>
     <body>
     <table border='2'>
+        <h2>Списък с всички времена</h2>
         <tr>
             <th>Ранк</th>
             <th>Име</th>
